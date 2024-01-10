@@ -3,7 +3,7 @@ import clsx from "clsx";
 // eslint-disable-next-line react/prop-types
 function MainLayout({ children, className }) {
   return (
-    <div className={clsx("max-w-5xl mx-auto min-h-screen", className)}>
+    <div className={clsx("max-w-4xl mx-auto min-h-screen", className)}>
       {children}
     </div>
   );

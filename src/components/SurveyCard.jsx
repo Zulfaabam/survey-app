@@ -2,6 +2,7 @@ const SurveyCard = () => {
   return (
     <div>
       <div className="bg-white rounded-lg shadow-md p-4">
+        <h2 className="text-lg font-bold mb-4 text-gray-400">Q1</h2>
         <h2 className="text-xl font-bold mb-4">Survey Question</h2>
         <div className="flex flex-col space-y-2">
           <label className="flex items-center">
@@ -19,7 +20,7 @@ const SurveyCard = () => {
         </div>
       </div>
 
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 ml-auto block">
         Next
       </button>
     </div>
