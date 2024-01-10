@@ -2,7 +2,7 @@ export const SURVEY_DATA = [
   {
     id: 1,
     question: "What is your favorite color?",
-    choices: [
+    options: [
       { id: 1, text: "Red" },
       { id: 2, text: "Blue" },
       { id: 3, text: "Green" },
@@ -11,7 +11,7 @@ export const SURVEY_DATA = [
   {
     id: 2,
     question: "What is your favorite animal?",
-    choices: [
+    options: [
       { id: 1, text: "Cat" },
       { id: 2, text: "Dog" },
       { id: 3, text: "Bird" },
@@ -20,7 +20,7 @@ export const SURVEY_DATA = [
   {
     id: 3,
     question: "What is your favorite food?",
-    choices: [
+    options: [
       { id: 1, text: "Pizza" },
       { id: 2, text: "Burger" },
       { id: 3, text: "Salad" },
@@ -29,7 +29,7 @@ export const SURVEY_DATA = [
   {
     id: 4,
     question: "What is your favorite movie?",
-    choices: [
+    options: [
       { id: 1, text: "Action" },
       { id: 2, text: "Comedy" },
       { id: 3, text: "Drama" },
@@ -38,7 +38,7 @@ export const SURVEY_DATA = [
   {
     id: 5,
     question: "What is your favorite book?",
-    choices: [
+    options: [
       { id: 1, text: "Fiction" },
       { id: 2, text: "Non-fiction" },
       { id: 3, text: "Mystery" },
@@ -47,7 +47,7 @@ export const SURVEY_DATA = [
   {
     id: 6,
     question: "What is your favorite sport?",
-    choices: [
+    options: [
       { id: 1, text: "Football" },
       { id: 2, text: "Basketball" },
       { id: 3, text: "Tennis" },
@@ -56,7 +56,7 @@ export const SURVEY_DATA = [
   {
     id: 7,
     question: "What is your favorite hobby?",
-    choices: [
+    options: [
       { id: 1, text: "Reading" },
       { id: 2, text: "Gaming" },
       { id: 3, text: "Cooking" },
@@ -65,7 +65,7 @@ export const SURVEY_DATA = [
   {
     id: 8,
     question: "What is your favorite music genre?",
-    choices: [
+    options: [
       { id: 1, text: "Pop" },
       { id: 2, text: "Rock" },
       { id: 3, text: "Hip Hop" },
@@ -74,7 +74,7 @@ export const SURVEY_DATA = [
   {
     id: 9,
     question: "What is your favorite season?",
-    choices: [
+    options: [
       { id: 1, text: "Spring" },
       { id: 2, text: "Summer" },
       { id: 3, text: "Autumn" },
@@ -83,7 +83,7 @@ export const SURVEY_DATA = [
   {
     id: 10,
     question: "What is your favorite holiday?",
-    choices: [
+    options: [
       { id: 1, text: "Christmas" },
       { id: 2, text: "Halloween" },
       { id: 3, text: "Thanksgiving" },

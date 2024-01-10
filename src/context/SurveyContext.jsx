@@ -3,11 +3,9 @@
 import { createContext, useContext, useState } from "react";
 
 const initialState = {
-  survey: {
-    questions: [],
-    answers: [],
-  },
-  step: 1,
+  answers: JSON.parse(localStorage.getItem("survey_answers")) ?? [],
+  step: JSON.parse(localStorage.getItem("survey_step")) ?? 1,
+  chosenAnswer: null,
 };
 
 export const SurveyContext = createContext(initialState);
@@ -21,15 +19,42 @@ const useSurveyContext = () => {
 const SurveyProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
 
-  const nextStep = () => {
-    setState((prevState) => ({
-      ...prevState,
-      step: prevState.step + 1,
-    }));
+  const handleChooseAnswer = (e) => {
+    const answer = e.target.value;
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        chosenAnswer: answer,
+      };
+    });
+  };
+
+  const onNextStep = (answer) => {
+    if (!answer) return;
+
+    setState((prevState) => {
+      const nextStep = prevState.step + 1;
+
+      const answers = [...prevState.answers, answer];
+
+      localStorage.setItem("survey_step", JSON.stringify(nextStep));
+
+      localStorage.setItem("survey_answers", JSON.stringify(answers));
+
+      return {
+        ...prevState,
+        answers,
+        step: nextStep,
+        chosenAnswer: null,
+      };
+    });
   };
 
   return (
-    <SurveyContext.Provider value={{ state, setState, nextStep }}>
+    <SurveyContext.Provider
+      value={{ state, setState, onNextStep, handleChooseAnswer }}
+    >
       {children}
     </SurveyContext.Provider>
   );
