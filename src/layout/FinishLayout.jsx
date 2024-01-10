@@ -14,16 +14,16 @@ function FinishLayout({ restart }) {
       </p>
       <div className="flex gap-4">
         <button
-          className="bg-white px-4 py-2 rounded-lg font-medium"
+          className="bg-white px-3 sm:px-4 py-1 sm:py-2 rounded-lg font-medium text-sm sm:text-base"
           onClick={() => {
             localStorage.clear();
             navigate("/", { replace: true });
           }}
         >
-          Back to Homepage
+          🔙 Home
         </button>
         <button
-          className="bg-white px-4 py-2 rounded-lg font-medium"
+          className="bg-white px-3 sm:px-4 py-1 sm:py-2 rounded-lg font-medium text-sm sm:text-base"
           onClick={() => {
             localStorage.clear();
 
@@ -37,7 +37,7 @@ function FinishLayout({ restart }) {
             }));
           }}
         >
-          Restart Survey
+          🔃 Restart
         </button>
       </div>
     </div>

@@ -10,3 +10,9 @@
     #f389bc 106.05%
   );
 }
+
+input[type="radio"] {
+  border: 0px;
+  width: 1.2em;
+  height: 1.2em;
+}

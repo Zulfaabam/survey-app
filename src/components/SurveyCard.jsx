@@ -8,7 +8,7 @@ const SurveyCard = ({ state, survey, onChange, onNext }) => {
         <h2 className="text-xl font-bold mb-4">{survey?.question}</h2>
         <div className="flex flex-col space-y-2">
           {survey?.options?.map((option) => (
-            <label className="flex items-center" key={option.id}>
+            <label className="flex items-center cursor-pointer" key={option.id}>
               <input
                 type="radio"
                 name={`option-${option?.id}`}
